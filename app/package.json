@@ -1,0 +1,32 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "codegen:openapi": "npx openapi-typescript 'openapi/**/*.yaml' --output schemas/",
+    "prisma": "npx dotenv -e .env.local -- npx prisma",
+    "test": "find -name \"*.spec.ts\" | xargs npx dotenv -e .env.local -- node --import tsx --test",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.8.1",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "dotenv-cli": "^7.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "openapi-typescript": "^6.7.3",
+    "prisma": "^5.8.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5"
+  }
+}

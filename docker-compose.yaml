@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  nodejs-openapi:
+    container_name: nodejs-openapi
+    image: node:20.11.0-alpine
+    tty: true
+    working_dir: /usr/src/app
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/usr/src/app

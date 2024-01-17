@@ -1,0 +1,24 @@
+openapi: 3.1.0
+info:
+  title: Health Check API
+  version: 1.0.0
+servers:
+  - url: http://shop-command.aimerzarashi.com
+paths:
+  /:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Internal Server Error
