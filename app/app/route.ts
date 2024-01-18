@@ -6,7 +6,7 @@ type Response =
 
 export async function GET(request: NextRequest) {
   const response: Response = {
-    message: "Ok",
+    message: "Hello, World!",
   };
   return NextResponse.json(response, { status: 200 });
 }
